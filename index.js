@@ -1,30 +1,32 @@
-let grid = document.querySelector(".grid")
-
-var createGrid = () => {
+function createTiles() {
+    // Create an empty array to store the tiles
+    const tiles = [];
+  
+    // Create a for loop to run 100 times
     for (let i = 0; i < 100; i++) {
-        let div = document.createElement("div")
-        div.classList.add(i)
-        grid.appendChild(div)
+      // Create a new tile
+      const tile = document.createElement("div");
+      tile.classList.add("tile");
+  
+      // Add the tile to the grid div
+      const grid = document.querySelector(".grid");
+      grid.appendChild(tile);
+  
+      // Add the tile to the tiles array
+      tiles.push(tile);
     }
-}
-    //1. spawn in random mines
-
-    //2.when u click square
-        // if its a 'safe' square 2 things can happen:
-        //1. shows a number in the clicked square on how many bombs are adjasent to it
-            //how to calculate this number
-        //2. uncovers all safe squares connected
-            // how to 
-
-    // if its a mine...game over
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    createGrid()
-})
-
-//lets create a function to paint all adjacent tiles red when i click on a tile
-let paint = () => {
+  
+    // Return the array of tiles
+    console.log(tiles)
+    tiles.forEach((tile) => {
+        tile.addEventListener("click", () => {
+          // Do something when the tile is clicked
+          tile.classList.add("red");
+        });
+      });
+      
+    return tiles;
     
-}
+  }
+  // Run the function on page load
+  window.addEventListener("load", createTiles);
