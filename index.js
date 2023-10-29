@@ -6,15 +6,21 @@ var createGrid = () => {
         grid.appendChild(div)
     }
 }
+    //1. spawn in random mines
 
-function startGame () {
+    //2.when u click square
+        // if its a 'safe' square 2 things can happen:
+        //1. shows a number in the clicked square on how many bombs are adjasent to it
+            //how to calculate this number
+        //2. uncovers all safe squares connected
+            // how to 
 
-}
+    // if its a mine...game over
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
-
-
-
     createGrid()
-    startGame()
 })
+
+//lets create a function to paint all adjacent tiles red when i click on a tile
