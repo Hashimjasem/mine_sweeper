@@ -35,7 +35,7 @@ function createTiles() {
 
   tiles.forEach((tile) => {
     int = Math.random(0,1)
-    if(int >= 0.9){
+    if(int >= 0.90){
       tile.classList.add("red");
     }
   });
@@ -58,9 +58,13 @@ function createTiles() {
     ];
 
 
+
     tile.addEventListener("click", () => {
       console.log("Clicked tile index:", index);
       console.log("surrounding tiles:", surroundingTiles)
+      if(tile.classList.contains('red')){
+        console.log('mine')
+      }
     });
   });
 
