@@ -3,6 +3,7 @@ let grid = document.querySelector(".grid")
 var createGrid = () => {
     for (let i = 0; i < 100; i++) {
         let div = document.createElement("div")
+        div.classList.add(i)
         grid.appendChild(div)
     }
 }
@@ -24,3 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 //lets create a function to paint all adjacent tiles red when i click on a tile
+let paint = () => {
+    
+}
